@@ -1,0 +1,75 @@
+nav{
+  background-color:#343A40;
+  width: 100vw;
+  height: 8.7vh;
+  position: sticky;
+  
+  
+}
+ul{
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+div{
+  width: 60vw
+}
+
+div > li{
+  margin-left: 5vw;
+  font-size: 25px;
+  font-weight: bolder;
+  color: white;
+
+}
+
+.dropdown-menu, .dropdown-menu-open, .dropdown-menu-close{
+  width: 100vw;
+  height: 50vh;
+  background-color:blue;
+  top: 0px;
+  position: absolute;
+  opacity: .8;
+  display: block;
+  z-index: -10;
+  
+}
+.dropdown-menu{
+  display: none;
+}
+
+.dropdown-menu-open{
+  animation: openMenu .5s forwards linear
+}
+.dropdown-menu-close{
+  animation: closeMenu .5s forwards linear
+}
+
+
+@keyframes openMenu {
+from { height: 0vh;} 
+to {height: 50vh;}
+}
+@keyframes closeMenu {
+  from { height: 50vh;} 
+  to {height: 0vh;}
+  }
+
+img{
+  width: 40px;
+  height: 40px;
+
+  display: none;
+}
+@media (max-width: 700px) {
+  img {
+    display: block;
+  }
+  .menu-text{
+    display: none;
+  }
+
+}
